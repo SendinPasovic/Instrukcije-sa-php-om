@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Instr_spasa: Zakaži</title>
+     <link rel="stylesheet" href="business.css">
+     <script src="login.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">                
+     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caramel&family=Lobster&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+     <div class="elfsight-app-cc71230e-76d2-41ea-a72c-22e2f973badd"></div>
+     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+</head>
+<body>
+     <nav class="navbar">
+
+          <div class ="navbar__container">
+
+               <a href="business.html"><img src="spas.jpg" class="navbar__logo" ></img></a>
+               <figure >
+                    <blockquote>
+                         <p style=" color: blue; padding-top: 7px; font-size: 22px; font-family: 'Caramel', cursive;
+                         font-family: 'Lobster', cursive;"><i>"Znanje - izbor pobjednika."</i></p>
+                    </blockquote>
+                    <figcaption id="who">– Fondacija Hastor</figcaption>
+               </figure>
+
+               <div class="navbar__toggle" id="mobile-menu">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+               <li class="navbar__item">
+                    <a href="instrukcije.html" class="navbar__links">
+
+                         Instrukcije
+                    </a>
+               </li>
+               <li class="navbar__item">
+                    <a href="projekti.html" class="navbar__links">
+
+                         Projekti
+                         Zadaće
+                    </a>
+               </li>
+               <li class="navbar__item">
+                    <a href="log.php" class="navbar__links" id="log">
+
+                         Login
+                    </a>
+               </li>
+
+               <li class="navbar__btn">
+                    <a href="login.html" class="button">
+                         Zakaži                    </a>
+               </li>
+          </ul>
+          </div>
+         
+     </nav>
+    
+
+     <section class="footer">
+     <div class="social">
+          <a href="https://www.instagram.com/instrukcije_spasa/?hl=hr" add a target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/spas_187/?hl=hr" add a target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/sendin.pasovic/" add a target="_blank"><i class="fab fa-facebook-f"></i></a>
+     </div>
+
+<ul class="list">
+    
+     <li>
+          <a href="#" add a target="_blank" >Uslovi privatnosti</a>
+     </li>
+
+</ul>
+<p class="copyright">
+     instrukcije_spasa @2022 <br>
+     <i>Sva prava pridržana</i>
+</p>
+</section>
+
+           <div class="contenthead">
+                <h1>Zakaži instrukcije</h1>
+            </div>           
+
+            <div class="form1">
+                <form id="forms" action="zakazivanje.php" method="POST">
+                    <label for="fname">Ime</label>
+                    <input type="text" id="fname" name="ime" placeholder="Vaše ime..">
+                
+                    <label for="lname">E-mail</label>
+                    <input type="Email" id="Email" name="email" placeholder="">
+
+                    <label for="fname">Broj telefona</label>
+                    <input type="text" id="Phone" name="broj" placeholder="">
+                    
+                    <label for="fname">Vrijeme</label>
+                    <input type="time" id="Time" name="vrijeme" placeholder="">
+                
+                    <label for="lname">Datum</label>
+                    <input type="date" id="Date" name="datum" placeholder="">
+                    <br><br>
+                    <label for="">Odaberite predmete</label>
+                    <br>
+                    <br>
+
+                    <input type="checkbox" class="checkbx" name="predmet" value="Matematika">
+                    <label for="">Matematika</label>
+                    <br>
+                    <input type="checkbox" class="checkbx" name="predmet"  value="Programiranje">
+                    <label for="">Programiranje</label>
+                    <br>
+                    <input type="checkbox" class="checkbx" name="predmet"  value="Baze podataka ">
+                    <label for="">Baze podataka</label>
+                    <br>
+                 
+                    <!-- <input type="submit" onclick="alert()" value="Submit"  class="btn" > -->
+                    <button onclick="sendEmail(); alert1()"  class="btn">Submit</button>
+               </form>
+
+                  
+               <script>
+
+
+const menu=document.querySelector('#mobile-menu');
+const menuLinks=document.querySelector('.navbar__menu');
+menu.addEventListener ('click', function (){
+ menu.classList.toggle('is-active');
+ menuLinks.classList.toggle ('active');
+});
+
+function alert1 () {
+               var name=document.getElementById("fname").value;
+               var time=document.getElementById("Time").value;
+               var date=document.getElementById("Date").value;
+              
+
+
+alert("Zahvaljujemo ja povjerenju " + name +"e \n  Vaša narudžba za "+ date +" u " + time + " je zaprimljena .");
+             
+}
+
+
+                        
+                          
+
+            
+
+                               
+                    </script>
+
+                
+            </div>
+         
+        </div>            
+
+                        
+
+                       
+                        </div>
+                    </div>
+                </div>
+                   
+            </footer>
+
+        </div>
+    </body>
+</html>

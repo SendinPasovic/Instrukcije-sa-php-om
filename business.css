@@ -1,0 +1,545 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0 ;
+    
+    
+}
+body {
+     font-family: 'Lobster', cursive;
+     background-color: aliceblue;
+     background-image: url("first_pic.jpg");
+     background-attachment: scroll;
+     
+
+}
+.navbar {
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+     background-color: rgb(83, 206, 243);
+     height: 80px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.2rem;
+     position: sticky;
+     top: 0;
+     z-index: 999;
+
+}
+
+.navbar__container        {
+     display: flex;
+     justify-content: space-between;
+     height: 80px;
+     z-index: 1;
+     width: 100%;
+     max-width: 1300px;
+     margin: 0 auto ;
+     padding: 0  50px;
+
+
+}
+.navbar__logo{
+     padding-top: 7px;
+     border-radius: 40%;
+     height: 70px;
+     width: 70px;
+}
+
+
+.fa-gem {
+     margin-right: 0.5rem;
+}
+.navbar__menu {
+     display: flex;
+     align-items: center;
+     list-style: none;
+     text-align: center;
+
+}
+.navbar__item {
+     height: 80px;
+}
+.navbar__links {
+     color: aliceblue;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     padding: 0 1rem ;
+     height: 100%;
+
+}
+.navbar__btn {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0 1rem;
+     width: 100%
+
+}
+.button {
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     padding: 10px 20px ;
+     width:100%;
+     height: 100%;
+     border: none;
+     outline: none;
+     border-radius: 4px;
+     background-color:rgb(27, 57, 155); 
+     color: aliceblue;
+     
+
+} 
+.button:hover {
+     background-color: blueviolet;
+     transition: all 0.3s ease;
+
+}
+.navbar__links:hover {
+     color:rgb(119, 119, 245);
+     transition: all 0.3s ease;
+
+}
+@media screen and (max-width: 980px){
+     .navbar__container {
+          display: flex;
+          justify-content: space-between;
+          height: 80px;
+          z-index:1;
+          width: 100%;
+          max-width: 1300px;
+          padding:0;
+
+     }
+     .navbar__menu {
+          display: grid;
+          grid-template-columns: auto;
+          margin:0;
+          width: 100%;
+          position: absolute;
+          top: -1000px;
+          opacity: 0;
+          height: 50vh;
+          z-index: -1;
+          background-color: rgb(83, 206, 243);
+
+     }
+     .navbar__menu.active {
+          background-color: aqua;
+          top: 100%;
+          opacity:1;
+          transition: all 0.5s ease;
+          z-index:99;
+          height:50vh;
+          font-size: 1.5rem;
+          
+     }
+     #navbar__logo{
+          padding-left: 25px;
+
+     }
+     .navbar__toggle .bar {
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          transition: all 0.3 ease-in-out;
+          background-color: #fff;
+
+     }
+     .navbar__item{
+          width:100%;
+
+     }
+     .navbar__links {
+          text-align:center;
+          padding: 2rem;
+          width: 100%;
+          display: table;
+     }
+
+     #mobile-menu {
+          position: absolute;
+          top:20%;
+          right:5%;
+          transform: translate(5%, 20%);
+
+     }
+     .navbar__btn{
+          padding-bottom: 2rem;
+
+     }
+     .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height:50px;
+          margin: 0;
+
+     }
+     .navbar__toggle .bar {
+          display: block;
+          cursor: pointer;
+
+     }
+
+     #mobile-menu.is-active .bar:nth-child(2){
+          opacity: 0;
+     }
+     #mobile-menu.is-active .bar:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+
+     }
+     #mobile-menu.is-active .bar:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+     }
+
+
+}
+
+h1 {
+     margin-bottom: 10px;
+     color: rgb(73, 187, 190);
+     font-size: 90px;  
+     text-align: center;      
+ 
+}
+#one, #two{
+padding: 10px;
+background-color: aliceblue;
+color: rgb(36, 147, 238);
+text-decoration: double;
+font-size: 25px;
+
+
+}
+#one {
+     border: 5px dotted rgb(0, 0, 0);
+
+     height: 400px;
+     float: left;
+     width: 30%;
+margin-left: 5%;
+
+
+   }
+   #two {
+     border: 5px dotted rgb(0, 0, 2);
+     height: 400px;
+     float: right;
+     width: 30%;
+     margin-right: 5%;
+   
+   
+   }
+   #my_pic {
+     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+     width: 370px;
+     height: 400px;
+ }
+
+ .footer{
+    
+height: 15%;
+     padding: 10px 10%;
+     background-color: aliceblue;
+     position:fixed;
+    bottom: 0;
+align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-top: auto;
+
+
+ }
+ 
+ .footer .social {
+     text-align: center;
+     padding-bottom: 10px;
+     color: black;
+
+ }
+ .footer .social a {
+     font-size: 24px;
+     color: inherit;
+     border: 1px solid #ccc;
+     width: 40px;
+     height: 40px;
+     line-height: 38px;
+     display: inline-block;
+     text-align: center;
+     border-radius: 50%;
+     margin: 0 8px;
+     opacity: 0.75;
+}
+.footer .social a:hover {
+     opacity:0.9;
+
+}
+.footer ul {
+     margin-top: 0;
+     padding: 0;
+     list-style: none;
+     font-size: 18px;
+     line-height: 1.6;
+     margin-bottom: 0;
+     text-align: center;
+}
+.footer ul a {
+     color: inherit;
+     text-decoration: none;
+     opacity: 0.8;
+}
+.footer ul li {
+     display:inline-block;
+     padding: 0 15px;
+     
+}
+.footer ul li a:hover {
+     opacity: 1;
+}
+.footer.copyright{
+     margin-top: 15px;
+     text-align: center;
+     font-size: 13px;
+     color: #aaa;
+}
+.copyright {
+     margin-top: 7px;
+     text-align: center;
+}
+
+#ad {
+     margin-top: 7.5%;
+
+     color: white;    
+     font-size: 25px; 
+     margin-left: 10% ;
+     margin-right: 10%;
+     font-family: 'Merriweather Sans', sans-serif;
+
+}
+#how {
+     color: white;
+     margin-top: 3%;
+     margin-left: 7.5%;
+     margin-right: 7.5%;
+     font-size: 24px;
+     padding-top: 1.2rem;
+    
+
+}
+.meth {
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     margin-top: 1%;
+     
+}
+.math {
+     padding-top: 3px;
+     justify-content: center;
+     margin-left: 2%;
+}
+.project {
+     color: rgb(255, 255, 255); 
+     background-color: rgb(68, 202, 255);
+      width: 300px;
+
+}
+
+.btn {
+     background-color: DodgerBlue;
+     border: none;
+     color: white;
+     padding: 12px 30px;
+     cursor: pointer;
+     font-size: 20px;
+   }
+   
+   .btn:hover {
+     background-color: RoyalBlue;
+   }
+   #forms {
+     padding-bottom: 15%;
+   }
+   .myButton {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=text],input[type=date],input[type=password], input[type=email],
+input[type=time], input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .btn{
+    
+    width:33.3%;
+ 
+   
+  
+    margin: 8px 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 18px;
+    
+    text-decoration: none;
+
+ margin-left: 33.3%;
+ margin-right: 33.3%;
+   
+  }
+  
+ .btn:hover {
+     background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  }
+  
+  .form1 {
+      align-items: center;
+    border-radius: 5px;
+    background-color:aliceblue;
+    padding: 2%;
+    margin: 2%;
+    border: solid black 2px;
+    width: auto;
+  }
+
+.contenthead{
+    
+    margin: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    border-bottom: solid 2px rgb(0, 0, 0);
+    text-align: center;
+}
+
+.login{
+     align-items: center;
+   border-radius: 5px;
+   background-color:aliceblue;
+   padding: 2%;
+   margin: 2%;
+   border: solid black 2px;
+   width: auto;
+ }
+
+
+
+.footer2{
+    
+     height: 15%;
+        
+          background-color: aliceblue;
+        
+      
+       
+         bottom: 0;
+         width: 100%;
+         z-index: 9999;
+     
+      }
+
+
+      .footer2 .social {
+          text-align: center;
+          padding-bottom: 10px;
+          color: black;
+     
+      }
+      .footer2 .social a {
+          font-size: 24px;
+          color: inherit;
+          border: 1px solid #ccc;
+          width: 40px;
+          height: 40px;
+          line-height: 38px;
+          display: inline-block;
+          text-align: center;
+          border-radius: 50%;
+          margin: 0 8px;
+          opacity: 0.75;
+     }
+     .footer2 .social a:hover {
+          opacity:0.9;
+     
+     }
+     .footer2 ul {
+          margin-top: 0;
+          padding: 0;
+          list-style: none;
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 0;
+          text-align: center;
+     }
+     .footer2 ul a {
+          color: inherit;
+          text-decoration: none;
+          opacity: 0.8;
+     }
+     .footer2 ul li {
+          display:inline-block;
+          padding: 0 15px;
+          
+     }
+     .footer2 ul li a:hover {
+          opacity: 1;
+     }
+     .footer2.copyright{
+          margin-top: 15px;
+          text-align: center;
+          font-size: 13px;
+          color: #aaa;
+     }
